@@ -1,20 +1,24 @@
 <template>
-  <h1>Vehicle Details Page</h1>
-  <p>The vehicle id is {{id}}</p>
+  <div>
+    <component :is="selectedComponent" />
+  </div>
 </template>
 
 <script>
+import Toyota from '@/components/Toyota.vue'
+import Subaru from '@/components/Subaru.vue'
+import Mazda from '@/components/Mazda.vue'
 export default {
-    props: ['id'],
-    // data(){
-    //     return{
-    //         id: this.$route.params.id
-    //     }
-    // }
-
-}
+  computed: {
+    selectedComponent() {
+      if (this.$route.params.id === '1') {
+        return Toyota; // Import your specific component
+      } else if (this.$route.params.id === '2') {
+        return Subaru; // Import your specific component
+      } else {
+        return Mazda; // Default component for other IDs
+      }
+    },
+  },
+};
 </script>
-
-<style>
-
-</style>

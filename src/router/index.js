@@ -5,6 +5,7 @@ import Vehicles from '../views/vehicles/Vehicles.vue'
 import VehicleDetails from '../views/vehicles/VehicleDetails'
 import PageNotFound from '../views/PageNotFound.vue'
 
+
 const routes = [
   {
     path: '/',
