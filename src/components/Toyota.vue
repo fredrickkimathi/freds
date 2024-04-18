@@ -3,7 +3,7 @@
 
   <div id="main" class="main">
     <div id="vitz">
-      <img src="@/assets/images/vitz.jpeg" alt="vitz">
+      <img src="@/assets/images/vitz.jpeg" alt="vitz" class="vitz">
     </div>
     <div id="t-text">
       <h2>Toyota Vitz Description</h2>
@@ -17,5 +17,9 @@
   display: flex; /* Make the container a flexbox */
   justify-content: space-between; /* Distribute content evenly */
   padding: 50px;
+}
+.vitz{
+  height: 250px;
+  width:300px;
 }
 </style>
