@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import Vehicles from '../views/vehicles/Vehicles.vue'
 import VehicleDetails from '../views/vehicles/VehicleDetails'
+import PageNotFound from '../views/PageNotFound.vue'
 
 const routes = [
   {
@@ -27,6 +28,18 @@ const routes = [
     name:'VehicleDetails',
     component: VehicleDetails,
     props: true
+  },
+
+  //FOR REDIRECTION 
+  {
+    path:'/show-vehicles',
+    redirect: '/vehicles'
+  },
+  //incase you enter unrecognized PATH.....catchAll
+  {
+    path:'/:catchAll(.*)',
+    name: 'PageNotFound',
+    component: PageNotFound
   }
 ]
 
